@@ -1,14 +1,14 @@
 name: Publish Digital Garden
 on:
-push:
-branches:
-- main
+  push:
+    branches:
+      - main
 jobs:
-build:
-runs-on: ubuntu-latest
-steps:
-- uses: actions/checkout@v3
-- name: Build Digital Garden
-uses: jackyzha0/hugo-action@v1
-with:
-source: .
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Digital Garden
+        uses: jackyzha0/hugo-action@v1
+        with:
+          source: .
